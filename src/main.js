@@ -4,6 +4,7 @@ import "@/assets/scss/index.scss";
 import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
 import RouterServiceProvider from "@/providers/RouterServiceProvider";
 import StorageServiceProvider from "@/providers/StorageServiceProvider";
+import './filters'
 
 Vue.config.productionTip = false
 

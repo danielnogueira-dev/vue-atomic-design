@@ -2,7 +2,14 @@
     <GradientBarsTemplate title="Users" subtitle="List of Users" icon="fa-users">
         <template slot="GradientTemplateTitle">asdfasdf</template>
         <b-card no-body>
-            <b-table head-variant="light" :items="users"/>
+            <b-table head-variant="light" :items="users">
+                <template v-slot:cell(id)="linha">
+                    <router-link :id="'link-edit-' + linha.index" :to="{ name: 'user.edit', params: { id: linha.item.id }}"
+                                 class="font-weight-bold">
+                        Editar
+                    </router-link>
+                </template>
+            </b-table>
         </b-card>
     </GradientBarsTemplate>
 </template>
