@@ -15,10 +15,16 @@
                     <div class="ml-4 mb-3">{{ subtitle }}</div>
                 </div>
 
-                <div class="m-3 mt-n10">
-                    <slot/>
-                    <router-view></router-view>
-                </div>
+                <b-card-group class="m-3 mt-n10 bg-transparent border-0" body-class="p-0" deck>
+                    <b-card class="col-md-9" body-class="p-0">
+                        <slot/>
+                        <router-view></router-view>
+                    </b-card>
+
+                    <b-card class="col-md-3 h-100 sticky-top shadow" body-class="p-0">
+                        <slot name="TemplateCardRight"/>
+                    </b-card>
+                </b-card-group>
 
                 <slot name="TemplateAfter"/>
             </div>
@@ -68,5 +74,8 @@
     }
     .mt-n10, .my-n10 {
         margin-top: -6rem !important;
+    }
+    .sticky-top{
+        top: 1.5rem;
     }
 </style>

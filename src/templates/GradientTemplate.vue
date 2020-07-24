@@ -48,12 +48,7 @@
     .pb-10, .py-10 {
         padding-bottom: 6rem !important;
     }
-
     .mt-n10, .my-n10 {
         margin-top: -6rem !important;
-    }
-
-    .mt-n5, .my-n5 {
-        padding: -3rem !important;
     }
 </style>

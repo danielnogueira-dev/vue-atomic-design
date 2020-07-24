@@ -7,13 +7,19 @@
         <p>Bienvenidos!</p>
         <p>Benvenuto!</p>
         <hr/>
-
+        <CountDown/>
+        <EmptyData/>
+        <Loading/>
     </b-card>
 </template>
 
 <script>
+    import CountDown from "@/components/CountDown";
+    import EmptyData from "@/components/EmptyData";
+    import Loading from "@/components/Loading";
     export default {
         name: "HomePage",
+        components: {Loading, EmptyData, CountDown},
         data() {
             return {
                 files: {},
