@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="pb-10 bg-yellow-gradient text-white" v-if="!hideGradient">
+        <div class="pb-10 bg-custom-gradient text-white" v-if="!hideGradient">
             <div class="container-fluid d-flex align-items-center justify-content-between">
                 <div class="pt-2 d-flex">
                     <i :class="`fas fa-2x m-2 ${icon}`"/>
-                    <h1>{{ title }}</h1>
+                    <h1>{{ title || `List of Elements` }}</h1>
                 </div>
                 <slot name="TemplateAfter"/>
             </div>
@@ -45,11 +45,6 @@
 </script>
 
 <style lang="scss" scoped>
-    .bg-yellow-gradient {
-        background-color: #f9b112;
-        background-image: linear-gradient(135deg, #f9b112 0%, rgba(255, 255, 255, 0.8) 100%);
-    }
-
     .pb-10, .py-10 {
         padding-bottom: 6rem !important;
     }

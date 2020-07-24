@@ -4,3 +4,11 @@
 @import "~@/assets/vendor/fontawesome/scss/regular.scss";
 @import "~@/assets/vendor/fontawesome/scss/brands.scss";
 @import "~@/assets/vendor/fontawesome/scss/solid.scss";
+
+$gradient-begin: #f9b112;
+$gradient-end: rgba(255, 255, 255, 0.8);
+
+.bg-custom-gradient {
+  background-color: $gradient-begin;
+  background-image: linear-gradient(135deg, $gradient-begin 0%, $gradient-end 100%);
+}

@@ -8,7 +8,7 @@
                     <div class="container-fluid d-flex align-items-center justify-content-between">
                         <div class="pt-2 d-flex">
                             <i :class="`fas fa-2x m-2 ${icon}`"/>
-                            <h1>{{ title }}</h1>
+                            <h1>{{ title || currentRouteName }}</h1>
                         </div>
                         <slot name="TemplateAfter"/>
                     </div>
@@ -48,6 +48,11 @@
             hideGradient: {
                 type: Boolean,
                 default: false
+            }
+        },
+        computed: {
+            currentRouteName() {
+                return this.$route.name;
             }
         }
     }
