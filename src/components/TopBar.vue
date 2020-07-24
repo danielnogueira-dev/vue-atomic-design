@@ -1,7 +1,7 @@
 <template>
     <b-navbar toggleable="lg" type="light" variant="light">
         <b-navbar-brand href="#" v-b-toggle.sidebar>
-            <img src="https://placekitten.com/g/30/30" alt="Kitten">
+            <b-button variant="light"><i class="fas fa-bars"></i></b-button>
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

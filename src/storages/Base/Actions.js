@@ -1,3 +1,5 @@
+import {Repository} from "@/repositories/Base/Repository";
+
 export class ActionsClass {
     constructor(repository) {
         this.$repository = repository
@@ -52,7 +54,10 @@ export class ActionsClass {
     }
 }
 
-export default function makeActions(Repository) {
-    const ActionsObj = new ActionsClass(Repository)
+export default function makeActions(repository) {
+    if (!(repository instanceof Repository)) {
+        throw new Error('storages/Base/Actions@makeActions param should be instance of repositories/Repository')
+    }
+    const ActionsObj = new ActionsClass(repository)
     return ActionsObj.classToObject()
 }
