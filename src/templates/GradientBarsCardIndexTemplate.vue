@@ -36,7 +36,7 @@
     import TopBar from "@/components/TopBar";
     import SideBar from "@/components/SideBar";
     export default {
-        name: "GradientBarsTemplate",
+        name: "GradientBarsRightFixTemplate",
         components: {SideBar, TopBar},
         props: {
             title: {

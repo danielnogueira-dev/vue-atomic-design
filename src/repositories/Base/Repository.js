@@ -29,6 +29,22 @@ export class Repository {
     delete (id) {
         return this.$axios.delete(`${this.endpoint}/${id}`)
     }
+
+    toastValidationErrors(error, snotify) {
+        let errors = {}
+        if (error.response) {
+            if (error.response.data) {
+                if (error.response.data.data) {
+                    errors = error.response.data.data
+                }
+            }
+        }
+        Object.keys(errors).map(field => {
+            errors[field].map(msg => {
+                snotify.error(msg)
+            })
+        })
+    }
 }
 
 export function createRepository (Instance) {
