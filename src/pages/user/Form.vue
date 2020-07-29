@@ -66,7 +66,7 @@ export default {
         }
       ],
       model: {
-        nome: '',
+        name: '',
         email: '',
         phone: '',
         website: '',
