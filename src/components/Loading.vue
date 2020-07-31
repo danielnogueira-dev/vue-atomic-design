@@ -25,7 +25,7 @@
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        border: 4px solid transparent;
+        border: 7px solid transparent;
         border-left-color: #ababab;
         border-top-color: #ababab;
         animation: circleanimation .50s linear infinite
