@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import "@/assets/scss/index.scss";
-import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
-import Snotify from 'vue-snotify'
 import RouterServiceProvider from "@/providers/RouterServiceProvider";
 import StorageServiceProvider from "@/providers/StorageServiceProvider";
+import "@/providers/PackagesProviders";
 import './filters'
 
 Vue.config.productionTip = false
-
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
-Vue.use(Snotify)
 
 /*router.beforeEach(async ($to, $from, $next) => {
   if ( Object.keys( $to.meta ).length > 0){
